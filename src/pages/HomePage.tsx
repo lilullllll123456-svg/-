@@ -19,11 +19,10 @@ function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="text-sm font-medium uppercase tracking-[0.42em] text-cyan-200/80">
-              {designerProfile?.role ?? 'UI Designer'} Portfolio
-            </p>
-            <h1 className="mt-8 max-w-5xl text-7xl font-semibold leading-[1.02] text-white text-balance">
-              {designerProfile?.headline ?? 'Digital product design with quiet depth.'}
+            <p className="text-sm font-medium uppercase tracking-[0.42em] text-cyan-200/80">Portfolio</p>
+            <h1 className="mt-8 max-w-5xl text-8xl font-semibold uppercase leading-[0.92] text-balance xl:text-[8.5rem]">
+              <span className="block text-[#b8f7ce]">Creative</span>
+              <span className="block text-white">Developer</span>
             </h1>
             <p className="mt-8 max-w-3xl text-xl leading-9 text-slate-300">
               {designerProfile?.intro ?? 'Portfolio introduction placeholder.'}
@@ -39,13 +38,12 @@ function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="absolute inset-0 rounded-lg border border-cyan-200/20 bg-cyan-100/[0.04] shadow-jelly-soft" />
             <img
               alt="Deep sea jellyfish inspired UI placeholder"
-              className="absolute inset-8 h-[calc(100%-4rem)] w-[calc(100%-4rem)] rounded-lg object-cover"
+              className="absolute inset-0 h-full w-full rounded-lg object-cover shadow-jelly-soft"
               src={assetPath('assets/placeholder-image.svg')}
             />
-            <div className="absolute bottom-12 left-12 right-12 rounded-lg border border-white/10 bg-abyss-950/78 p-6 backdrop-blur-xl">
+            <div className="absolute bottom-8 left-8 right-8 rounded-lg border border-white/10 bg-abyss-950/78 p-6 backdrop-blur-xl">
               <p className="text-sm uppercase tracking-[0.32em] text-teal-200/80">Current Focus</p>
               <p className="mt-3 text-2xl font-semibold text-white">AI workflow, SaaS dashboard, design system</p>
             </div>
