@@ -47,12 +47,13 @@ class ErrorBoundary extends React.Component<React.PropsWithChildren, ErrorBounda
 }
 
 const rootElement = document?.getElementById('root')
+const routerBasename = import.meta.env?.BASE_URL ?? '/'
 
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <ErrorBoundary>
-        <BrowserRouter>
+        <BrowserRouter basename={routerBasename}>
           <App />
         </BrowserRouter>
       </ErrorBoundary>
