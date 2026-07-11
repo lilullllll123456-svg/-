@@ -1,0 +1,19 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#020817"/>
+  <rect x="76" y="64" width="1048" height="547" rx="32" fill="#07182D" stroke="#1F9FC2" stroke-opacity="0.52" stroke-width="2"/>
+  <circle cx="600" cy="338" r="92" fill="#67E8F9" fill-opacity="0.12"/>
+  <path d="M569 288L655 338L569 388V288Z" fill="#E0F2FE"/>
+  <circle cx="366" cy="242" r="156" fill="url(#a)" opacity="0.5"/>
+  <circle cx="820" cy="402" r="180" fill="url(#b)" opacity="0.45"/>
+  <text x="96" y="584" fill="#BAE6FD" font-family="Arial, sans-serif" font-size="26">VIDEO POSTER PLACEHOLDER</text>
+  <defs>
+    <radialGradient id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(366 242) rotate(90) scale(156)">
+      <stop stop-color="#5EEAD4"/>
+      <stop offset="1" stop-color="#5EEAD4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(820 402) rotate(90) scale(180)">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

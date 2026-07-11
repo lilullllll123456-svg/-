@@ -1,0 +1,31 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#041224"/>
+  <circle cx="368" cy="258" r="210" fill="url(#cyanGlow)" opacity="0.72"/>
+  <circle cx="804" cy="344" r="280" fill="url(#violetGlow)" opacity="0.52"/>
+  <path d="M286 276C354 166 518 163 592 269C659 365 588 488 470 500C330 515 210 399 286 276Z" fill="url(#jelly)" opacity="0.82"/>
+  <path d="M426 486C418 575 369 612 372 710" stroke="#80F7EF" stroke-width="6" stroke-linecap="round" opacity="0.38"/>
+  <path d="M492 490C510 590 468 636 486 730" stroke="#A5F3FC" stroke-width="5" stroke-linecap="round" opacity="0.32"/>
+  <path d="M552 462C606 548 583 624 646 700" stroke="#C4B5FD" stroke-width="4" stroke-linecap="round" opacity="0.28"/>
+  <rect x="82" y="84" width="1036" height="632" rx="36" stroke="url(#stroke)" stroke-width="2" opacity="0.62"/>
+  <text x="92" y="742" fill="#E0F2FE" font-family="Arial, sans-serif" font-size="28" letter-spacing="0">PROJECT MEDIA PLACEHOLDER</text>
+  <defs>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(368 258) rotate(90) scale(210)">
+      <stop stop-color="#67E8F9" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(804 344) rotate(90) scale(280)">
+      <stop stop-color="#A78BFA" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="jelly" x1="298" y1="190" x2="612" y2="514" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9F99D" stop-opacity="0.72"/>
+      <stop offset="0.48" stop-color="#67E8F9" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.42"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="82" y1="84" x2="1118" y2="716" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="0.52" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#5EEAD4"/>
+    </linearGradient>
+  </defs>
+</svg>
