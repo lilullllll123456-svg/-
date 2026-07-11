@@ -5,7 +5,7 @@ import Container from '../components/Container'
 import PrimaryButton from '../components/PrimaryButton'
 import ProjectCard from '../components/ProjectCard'
 import SectionHeader from '../components/SectionHeader'
-import { capabilities, designerProfile, processSteps, projects } from '../data/portfolio'
+import { assetPath, capabilities, designerProfile, processSteps, projects } from '../data/portfolio'
 
 function HomePage() {
   const featuredProject = projects?.[0]
@@ -43,7 +43,7 @@ function HomePage() {
             <img
               alt="Deep sea jellyfish inspired UI placeholder"
               className="absolute inset-8 h-[calc(100%-4rem)] w-[calc(100%-4rem)] rounded-lg object-cover"
-              src="/assets/placeholder-image.svg"
+              src={assetPath('assets/placeholder-image.svg')}
             />
             <div className="absolute bottom-12 left-12 right-12 rounded-lg border border-white/10 bg-abyss-950/78 p-6 backdrop-blur-xl">
               <p className="text-sm uppercase tracking-[0.32em] text-teal-200/80">Current Focus</p>

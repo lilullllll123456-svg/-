@@ -21,6 +21,10 @@ export type TimelineItem = {
   description: string
 }
 
+const assetBase = import.meta.env?.BASE_URL ?? '/'
+
+export const assetPath = (path: string) => `${assetBase}${path.replace(/^\/+/, '')}`
+
 export const designerProfile = {
   name: 'Luna Shen',
   role: 'UI / UX Designer',
@@ -47,7 +51,7 @@ export const projects: Project[] = [
     year: '2026',
     summary:
       '面向运营团队的实时数据产品，强调跨指标扫描、异常识别与多角色协同。',
-    image: '/assets/placeholder-image.svg',
+    image: assetPath('assets/placeholder-image.svg'),
     tags: ['Design System', 'Data Viz', 'SaaS'],
     metrics: ['42 screens', '8 modules', '1700px canvas']
   },
@@ -58,7 +62,7 @@ export const projects: Project[] = [
     year: '2025',
     summary:
       '为 AI 内容生产链路设计的多面板工作台，整合输入、生成、审阅与发布状态。',
-    image: '/assets/placeholder-image.svg',
+    image: assetPath('assets/placeholder-image.svg'),
     tags: ['AI UX', 'Workflow', 'Prototype'],
     metrics: ['12 flows', '5 states', 'Motion guide']
   },
@@ -69,7 +73,7 @@ export const projects: Project[] = [
     year: '2025',
     summary:
       '从色彩、组件、动效到图表规范的产品级视觉系统，支持多业务线快速落地。',
-    image: '/assets/placeholder-image.svg',
+    image: assetPath('assets/placeholder-image.svg'),
     tags: ['Tokens', 'Components', 'Guidelines'],
     metrics: ['96 components', '24 tokens', '3 themes']
   },
@@ -80,7 +84,7 @@ export const projects: Project[] = [
     year: '2024',
     summary:
       '高安全金融场景的移动体验重构，提升关键任务路径的可理解性和完成效率。',
-    image: '/assets/placeholder-image.svg',
+    image: assetPath('assets/placeholder-image.svg'),
     tags: ['Mobile', 'Fintech', 'UX Audit'],
     metrics: ['28 screens', '4 journeys', 'A11y pass']
   }

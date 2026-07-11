@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import Container from '../components/Container'
 import ProjectCard from '../components/ProjectCard'
 import SectionHeader from '../components/SectionHeader'
-import { projects } from '../data/portfolio'
+import { assetPath, projects } from '../data/portfolio'
 
 function WorkPage() {
   const categories = Array.from(new Set((projects ?? []).map((project) => project?.category ?? 'Case')))
@@ -48,7 +48,7 @@ function WorkPage() {
             <img
               alt="Video poster placeholder"
               className="h-full min-h-[260px] w-full object-cover"
-              src="/assets/placeholder-video-poster.svg"
+              src={assetPath('assets/placeholder-video-poster.svg')}
             />
           </div>
         </motion.section>

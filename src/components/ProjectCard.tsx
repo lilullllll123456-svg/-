@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
-import type { Project } from '../data/portfolio'
+import { assetPath, type Project } from '../data/portfolio'
 
 type ProjectCardProps = {
   project: Project
@@ -22,7 +22,7 @@ function ProjectCard({ project, featured = false }: ProjectCardProps) {
         <img
           alt={`${project?.title ?? 'Project'} media placeholder`}
           className="h-full min-h-[280px] w-full object-cover opacity-90 transition duration-700 group-hover:scale-105"
-          src={project?.image ?? '/assets/placeholder-image.svg'}
+          src={project?.image ?? assetPath('assets/placeholder-image.svg')}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-abyss-950/80 via-transparent to-cyan-200/5" />
       </div>

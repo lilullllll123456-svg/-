@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Container from '../components/Container'
 import SectionHeader from '../components/SectionHeader'
-import { capabilities, designerProfile, timeline } from '../data/portfolio'
+import { assetPath, capabilities, designerProfile, timeline } from '../data/portfolio'
 
 function AboutPage() {
   return (
@@ -18,7 +18,7 @@ function AboutPage() {
             <img
               alt="Designer portrait placeholder"
               className="h-[460px] w-full rounded-lg object-cover"
-              src="/assets/placeholder-image.svg"
+              src={assetPath('assets/placeholder-image.svg')}
             />
             <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
               <div className="rounded-md bg-white/[0.04] p-4">
