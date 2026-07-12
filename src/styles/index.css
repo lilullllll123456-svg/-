@@ -4,8 +4,9 @@
 
 :root {
   color-scheme: dark;
-  background: #020817;
-  color: #f8fafc;
+  background: #0c0c0c;
+  color: #d7e2ea;
+  font-family: 'Kanit', ui-sans-serif, system-ui, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,23 +15,22 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-  min-width: 1024px;
   scroll-behavior: smooth;
-  background: #020817;
+  background: #0c0c0c;
 }
 
 body {
-  min-width: 1024px;
   min-height: 100vh;
   margin: 0;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(56, 189, 248, 0.18), transparent 34%),
-    radial-gradient(circle at 84% 18%, rgba(167, 139, 250, 0.15), transparent 32%),
-    linear-gradient(180deg, #020817 0%, #06142a 48%, #020817 100%);
-  color: #f8fafc;
+  overflow-x: clip;
+  background: #0c0c0c;
+  color: #d7e2ea;
+  font-family: 'Kanit', ui-sans-serif, system-ui, sans-serif;
 }
 
 body::selection {
@@ -51,7 +51,8 @@ textarea {
 
 #root {
   min-height: 100vh;
-  background: transparent;
+  overflow-x: clip;
+  background: #0c0c0c;
 }
 
 .glass-panel {
@@ -63,4 +64,11 @@ textarea {
 
 .text-balance {
   text-wrap: balance;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
