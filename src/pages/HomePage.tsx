@@ -32,6 +32,8 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
+const portraitImage = `${import.meta.env?.BASE_URL ?? '/'}assets/lucy-portrait.png`
+
 const marqueeImages = [
   'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
   'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
@@ -171,7 +173,7 @@ function ContactButton() {
   return (
     <a
       className="inline-flex rounded-full px-8 py-3 text-xs font-medium uppercase tracking-widest text-white outline outline-2 -outline-offset-[3px] outline-white transition duration-200 hover:scale-[1.03] sm:px-10 sm:py-3.5 sm:text-sm md:px-12 md:py-4 md:text-base"
-      href="mailto:hello@jack.dev"
+      href="mailto:hello@lucy.dev"
       style={{
         background: 'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
         boxShadow: '0px 4px 4px rgba(181, 1, 167, 0.25), 4px 4px 12px #7721B1 inset',
@@ -316,7 +318,7 @@ function HeroSection() {
 
       <FadeIn className="relative z-0 mt-6 overflow-hidden sm:mt-4 md:-mt-5" delay={0.15} y={40}>
         <h1 className="hero-heading w-full whitespace-nowrap text-[14vw] font-black uppercase leading-none tracking-tight sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]">
-          Hi, i&apos;m jack
+          Hi, i&apos;m LUCY
         </h1>
       </FadeIn>
 
@@ -327,11 +329,11 @@ function HeroSection() {
       >
         <FadeIn delay={0.6} y={30}>
           <img
-            alt="Jack 3D creator portrait"
+            alt="Lucy 3D creator portrait"
             className="block w-full select-none object-contain"
             draggable="false"
             loading="eager"
-            src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
+            src={portraitImage}
           />
         </FadeIn>
       </Magnet>
