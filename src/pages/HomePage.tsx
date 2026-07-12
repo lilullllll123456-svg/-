@@ -323,7 +323,7 @@ function HeroSection() {
       </FadeIn>
 
       <Magnet
-        className="absolute left-1/2 top-1/2 z-10 w-[360px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:w-[500px] sm:translate-y-0 md:w-[640px] lg:w-[760px]"
+        className="absolute left-1/2 top-1/2 z-10 w-[288px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:w-[400px] sm:translate-y-0 md:w-[512px] lg:w-[608px]"
         padding={150}
         strength={3}
       >
