@@ -338,6 +338,18 @@ function HeroSection() {
         </FadeIn>
       </Magnet>
 
+      <FadeIn
+        className="absolute left-6 top-[48%] z-20 max-w-[560px] -translate-y-1/2 pr-6 sm:left-10 md:top-[53%]"
+        delay={0.4}
+        y={20}
+      >
+        <p className="text-[clamp(0.8rem,1.25vw,1.1rem)] font-light leading-relaxed tracking-wide text-[#D7E2EA]/78">
+          Skilled in mobile and web interface design, with a focus on visual texture, user experience and
+          implementation details. Well-versed in product thinking and design specifications, capable of independently
+          completing interface design, visual optimization and adaptation delivery.
+        </p>
+      </FadeIn>
+
       <div className="relative z-20 mt-auto flex items-end justify-between px-6 pb-7 sm:pb-8 md:px-10 md:pb-10">
         <FadeIn delay={0.35} y={20}>
           <p className="max-w-[160px] text-[clamp(0.75rem,1.4vw,1.5rem)] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[220px] md:max-w-[260px]">
@@ -391,7 +403,7 @@ function MarqueeSection() {
           {(repeatedFirstRow ?? []).map((image, index) => (
             <img
               alt={`3D project preview ${index + 1}`}
-              className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover"
+              className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover grayscale saturate-0"
               key={`${image}-${index}`}
               loading="lazy"
               src={image}
@@ -405,7 +417,7 @@ function MarqueeSection() {
           {(repeatedSecondRow ?? []).map((image, index) => (
             <img
               alt={`3D project preview ${index + 12}`}
-              className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover"
+              className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover grayscale saturate-0"
               key={`${image}-${index}`}
               loading="lazy"
               src={image}
