@@ -538,20 +538,20 @@ function ProjectCard({ project, index, totalCards }: { project: ProjectCardData;
           <div className="grid gap-4">
             <img
               alt={`${project?.name ?? 'Project'} preview one`}
-              className="h-[clamp(130px,16vw,230px)] w-full rounded-[40px] object-cover sm:rounded-[50px] md:rounded-[60px]"
+              className="h-[clamp(130px,16vw,230px)] w-full rounded-[40px] object-cover grayscale saturate-0 sm:rounded-[50px] md:rounded-[60px]"
               loading="lazy"
               src={images?.[0] ?? ''}
             />
             <img
               alt={`${project?.name ?? 'Project'} preview two`}
-              className="h-[clamp(160px,22vw,340px)] w-full rounded-[40px] object-cover sm:rounded-[50px] md:rounded-[60px]"
+              className="h-[clamp(160px,22vw,340px)] w-full rounded-[40px] object-cover grayscale saturate-0 sm:rounded-[50px] md:rounded-[60px]"
               loading="lazy"
               src={images?.[1] ?? ''}
             />
           </div>
           <img
             alt={`${project?.name ?? 'Project'} main preview`}
-            className="h-full min-h-[360px] w-full rounded-[40px] object-cover sm:rounded-[50px] md:rounded-[60px]"
+            className="h-full min-h-[360px] w-full rounded-[40px] object-cover grayscale saturate-0 sm:rounded-[50px] md:rounded-[60px]"
             loading="lazy"
             src={images?.[2] ?? ''}
           />
