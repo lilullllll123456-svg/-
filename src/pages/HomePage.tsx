@@ -33,10 +33,9 @@ const navLinks = [
 ]
 
 const portraitImage = `${import.meta.env?.BASE_URL ?? '/'}assets/lucy-portrait.png`
-const ipDesignImage = `${import.meta.env?.BASE_URL ?? '/'}assets/ip-design.png`
 
 const marqueeImages = [
-  ipDesignImage,
+  'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
   'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
   'https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif',
   'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
@@ -351,12 +350,7 @@ function HeroSection() {
         </p>
       </FadeIn>
 
-      <div className="relative z-20 mt-auto flex items-end justify-between px-6 pb-7 sm:pb-8 md:px-10 md:pb-10">
-        <FadeIn delay={0.35} y={20}>
-          <p className="max-w-[160px] text-[clamp(0.75rem,1.4vw,1.5rem)] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[220px] md:max-w-[260px]">
-            a 3d creator driven by crafting striking and unforgettable projects
-          </p>
-        </FadeIn>
+      <div className="relative z-20 mt-auto flex items-end justify-end px-6 pb-7 sm:pb-8 md:px-10 md:pb-10">
         <FadeIn delay={0.5} y={20}>
           <ContactButton />
         </FadeIn>
@@ -401,13 +395,12 @@ function MarqueeSection() {
     <section className="overflow-hidden bg-[#0C0C0C] pb-10 pt-24 sm:pt-32 md:pt-40" ref={sectionRef}>
       <div className="flex flex-col gap-3">
         <div className="flex gap-3" style={{ transform: `translateX(${offset - 200}px)`, willChange: 'transform' }}>
-          {(repeatedFirstRow ?? []).map((image, index) => (
-            <img
-              alt={`3D project preview ${index + 1}`}
-              className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover grayscale saturate-0"
-              key={`${image}-${index}`}
-              loading="lazy"
-              src={image}
+          {(repeatedFirstRow ?? []).map((_, index) => (
+            <div
+              aria-label={`Gallery placeholder ${index + 1}`}
+              className="h-[270px] w-[420px] shrink-0 rounded-2xl bg-[#6f7680]"
+              key={`gallery-placeholder-one-${index}`}
+              role="img"
             />
           ))}
         </div>
@@ -415,13 +408,12 @@ function MarqueeSection() {
           className="flex gap-3"
           style={{ transform: `translateX(${-1 * (offset - 200)}px)`, willChange: 'transform' }}
         >
-          {(repeatedSecondRow ?? []).map((image, index) => (
-            <img
-              alt={`3D project preview ${index + 12}`}
-              className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover grayscale saturate-0"
-              key={`${image}-${index}`}
-              loading="lazy"
-              src={image}
+          {(repeatedSecondRow ?? []).map((_, index) => (
+            <div
+              aria-label={`Gallery placeholder ${index + 12}`}
+              className="h-[270px] w-[420px] shrink-0 rounded-2xl bg-[#6f7680]"
+              key={`gallery-placeholder-two-${index}`}
+              role="img"
             />
           ))}
         </div>
@@ -514,7 +506,6 @@ function ProjectCard({ project, index, totalCards }: { project: ProjectCardData;
   })
   const targetScale = 1 - (totalCards - 1 - index) * 0.03
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale])
-  const images = project?.images ?? []
 
   return (
     <div className="relative h-[85vh]" ref={cardRef}>
@@ -537,24 +528,21 @@ function ProjectCard({ project, index, totalCards }: { project: ProjectCardData;
 
         <div className="mt-6 grid gap-4 lg:grid-cols-[0.4fr_0.6fr]">
           <div className="grid gap-4">
-            <img
-              alt={`${project?.name ?? 'Project'} preview one`}
-              className="h-[clamp(130px,16vw,230px)] w-full rounded-[40px] object-cover grayscale saturate-0 sm:rounded-[50px] md:rounded-[60px]"
-              loading="lazy"
-              src={images?.[0] ?? ''}
+            <div
+              aria-label={`${project?.name ?? 'Project'} gray placeholder one`}
+              className="h-[clamp(130px,16vw,230px)] w-full rounded-[40px] bg-[#7b838c] sm:rounded-[50px] md:rounded-[60px]"
+              role="img"
             />
-            <img
-              alt={`${project?.name ?? 'Project'} preview two`}
-              className="h-[clamp(160px,22vw,340px)] w-full rounded-[40px] object-cover grayscale saturate-0 sm:rounded-[50px] md:rounded-[60px]"
-              loading="lazy"
-              src={images?.[1] ?? ''}
+            <div
+              aria-label={`${project?.name ?? 'Project'} gray placeholder two`}
+              className="h-[clamp(160px,22vw,340px)] w-full rounded-[40px] bg-[#7b838c] sm:rounded-[50px] md:rounded-[60px]"
+              role="img"
             />
           </div>
-          <img
-            alt={`${project?.name ?? 'Project'} main preview`}
-            className="h-full min-h-[360px] w-full rounded-[40px] object-cover grayscale saturate-0 sm:rounded-[50px] md:rounded-[60px]"
-            loading="lazy"
-            src={images?.[2] ?? ''}
+          <div
+            aria-label={`${project?.name ?? 'Project'} main gray placeholder`}
+            className="h-full min-h-[360px] w-full rounded-[40px] bg-[#7b838c] sm:rounded-[50px] md:rounded-[60px]"
+            role="img"
           />
         </div>
       </motion.article>
